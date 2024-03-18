@@ -1,0 +1,65 @@
+{
+    "module": {
+        "mounts": [
+            {
+                "source": "content/en",
+                "target": "assets"
+            },
+            {
+                "source": "content/es",
+                "target": "assets"
+            },
+            {
+                "source": "content",
+                "target": "assets"
+            },
+            {
+                "source": "assets",
+                "target": "assets"
+            }
+        ]
+    },
+    "defaultContentLanguage": "en",
+    "defaultContentLanguageInSubdir": false,
+    "languages": {
+        "en": {
+            "contentDir": "content/en",
+            "disabled": false,
+            "languageCode": "en-US",
+            "languageDirection": "ltr",
+            "languageName": "English",
+            "params": {
+                "subtitle": "Reference, Tutorials, and Explanations"
+            },
+            "title": "Project Documentation",
+            "weight": 1
+        },
+        "es": {
+            "contentDir": "content/es",
+            "disabled": false,
+            "languageCode": "es-ES",
+            "languageDirection": "ltr",
+            "languageName": "Spanish",
+            "params": {
+                "subtitle": "Referencias, Tutoriales y Explicaciones"
+            },
+            "title": "Documentación del proyecto",
+            "weight": 2
+        }
+    },
+    "markup": {
+        "goldmark": {
+            "extensions": {
+                "typographer": false
+            },
+            "parser": {
+                "attribute": {
+                    "block": true
+                }
+            },
+            "renderer": {
+                "unsafe": true
+            }
+        }
+    }
+}

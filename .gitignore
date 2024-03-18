@@ -1,0 +1,16 @@
+.idea/
+.vscode/
+.history/
+.reports/
+*.conf
+.gitconfig
+node_modules/
+.DS_Store
+.hugo_build.lock
+public/
+
+# generated code
+web/
+resources/
+jsconfig.json
+data/build.yaml

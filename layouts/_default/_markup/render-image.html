@@ -1,0 +1,12 @@
+{{ $path := print .Page.File.Dir .Destination }}
+{{ $image := resources.Get $path }}
+{{ if not $image }}
+{{ errorf "Image not found: %q" $path }}
+{{ end }}
+<span class="figure">
+    <img src="{{ ($image | fingerprint).RelPermalink }}" alt="{{ .Text }}" width="{{ $image.Width }}"
+        height="{{ $image.Height }}" style="height: 200px; width: auto" />
+    {{ if .Title }}
+    <span class="caption">{{ .Title }}</span>
+    {{ end }}
+</span>
